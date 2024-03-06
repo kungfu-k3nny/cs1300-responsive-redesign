@@ -33,19 +33,39 @@
     list-style: none; /* Removes default list styling */
     padding: 10px;
     display: flex; /* Arranges the navigation items in a row */
-    justify-content: space-evenly; /* Distributes space evenly around the items */
+    justify-content: center; /* Distributes space evenly around the items */
   }
   
-  /* Styling for each navigation item */
-  nav ul li {
-    padding: 5px 10px;
-  }
-  
-  /* Styling for navigation links */
-  nav ul li a {
-    text-decoration: none; /* Removes underline from links */
-    color: #333; /* Dark color for the links for readability */
-  }
+/* Navigation buttons surrounded by boxes */
+nav ul li {
+  flex: 1;
+  background-color: #B7B7A4; /* Fills the button with color */
+  border-radius: 5px; /* Optional: Adds rounded corners to the boxes */
+  margin: 5px; /* Adds some space between the boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Drop shadow effect */
+}
+
+/* Style adjustments for links within the navigation buttons */
+nav ul li a {
+  display: block; /* Makes the link fill the entire list item */
+  padding: 10px 20px; /* Adds padding inside the boxes */
+  text-decoration: none; /* Removes the underline from the links */
+  color: #333; /* Text color for readability */
+  border-radius: 5px;
+  font-size: 16px; /* Default font size for navigation links */
+  transition: box-shadow .3s ease;
+  transition: background-color 0.3s; /* Smooth background color transition for hover effect */
+}
+
+/* Hover effect for navigation buttons */
+nav ul li a:hover {
+  background-color: #9f9f8f; /* Light gray background on hover */
+  border-radius: 5px;
+}
+
+nav ul li a:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .5); /* Inner shadow effect */
+}
   
   /* Contact form section styling */
   .contact-form {
@@ -58,6 +78,7 @@
   /* Heading styling within the contact form */
   .contact-form h2 {
     color: #333;
+    margin-bottom: 20px;
   }
   
   /* Styling for each input group in the form */
@@ -101,3 +122,80 @@
   button:hover {
     background-color: #724B43; /* Darkens the button color on hover */
   }
+
+  /* Burger Icon Styling */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Media Query for Screen Width 768px or less */
+@media screen and (max-width: 760px) {
+  /* Hide the navigation menu */
+  nav ul {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0vh;
+    background-color: #D3BDA5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    justify-content: space-evenly;
+    padding: 20px; /* Add padding to create space around the menu items */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for a "floating" effect */
+  }
+
+  /* Adjusted styles for navigation list items in responsive design */
+  nav ul li {
+    flex: 0;
+    width: 100%; /* Each button takes full width of the menu */
+    background-color: #B7B7A4;
+  }
+  
+  /* Show the navigation menu when nav-active class is added by JavaScript */
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  /* Display the burger icon */
+  .burger {
+    display: block;
+  }
+
+  /* Animate burger icon into 'X' when toggle class is added by JavaScript */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .toggle .line2 {
+    opacity: 0;
+  }
+  
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Additional Media Query for smaller screen width when the text becomes too large */
+@media screen and (max-width: 480px) { /* You can adjust this breakpoint as needed */
+  nav ul li a {
+    font-size: 12px; /* Smaller font size for navigation links */
+  }
+
+  /* Adjust the burger lines if necessary */
+  .burger div {
+    width: 20px; /* Adjust width of burger lines if needed */
+  }
+}

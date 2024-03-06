@@ -22,6 +22,12 @@
         <li><a href="#">Contact Us</a></li>
       </ul>
     </nav>
+
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
     <!-- Title of the Cafe -->
     <h1>BAGEL GOURMET CAFE</h1>
     <!-- Cafe slogan -->
@@ -71,5 +77,18 @@
       </form>
     </section>
   </main>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav ul');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+      
+      // Burger Animation
+      burger.classList.toggle('toggle');
+    });
+  </script>
+  
 </body>
 </html>
