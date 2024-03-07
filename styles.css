@@ -47,7 +47,9 @@ nav ul li {
 
 /* Style adjustments for links within the navigation buttons */
 nav ul li a {
-  display: block; /* Makes the link fill the entire list item */
+  display: flex; /* Aligns the icon and text horizontally */
+  align-items: center; /* Centers the items vertically */
+  justify-content: center; /* Centers the content horizontally (if needed) */
   padding: 10px 20px; /* Adds padding inside the boxes */
   text-decoration: none; /* Removes the underline from the links */
   color: #333; /* Text color for readability */
@@ -55,6 +57,12 @@ nav ul li a {
   font-size: 16px; /* Default font size for navigation links */
   transition: box-shadow .3s ease;
   transition: background-color 0.3s; /* Smooth background color transition for hover effect */
+}
+
+nav ul li a img {
+  margin-right: 8px; /* Adjusts spacing between the icon and the text */
+  width: 24px; /* Adjust as necessary */
+  height: auto; /* Maintains aspect ratio */
 }
 
 /* Hover effect for navigation buttons */
@@ -138,7 +146,7 @@ nav ul li a:active {
 }
 
 /* Media Query for Screen Width 768px or less */
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 900px) {
   /* Hide the navigation menu */
   nav ul {
     position: absolute;
