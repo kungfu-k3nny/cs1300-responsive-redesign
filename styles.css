@@ -7,7 +7,7 @@
   
   /* General body styles */
   body {
-    font-family: 'Arial', sans-serif; /* Sets the default font for the page */
+    font-family: 'Cabin', sans-serif; /* Sets the default font for the page */
   }
   
   /* Header section styling */
@@ -20,6 +20,7 @@
   /* Styling for the cafe title */
   header h1 {
     margin-top: 10px;
+    font-family: 'Mate SC', sans-serif; /* Sets the default font for the page */
     color: #333; /* Dark text color for contrast */
   }
   
@@ -86,6 +87,7 @@ nav ul li a:active {
   
   /* Heading styling within the contact form */
   .contact-form h2 {
+    font-family: 'Montserrat', sans-serif; /* Sets the default font for the page */
     color: #333;
     margin-bottom: 20px;
   }
@@ -107,6 +109,7 @@ nav ul li a:active {
   .input-group input[type="email"],
   .input-group input[type="tel"],
   .input-group textarea {
+    font-family: 'cabin', sans-serif; /* Sets the default font for the page */
     width: 100%; /* Makes the input fields take up full container width */
     padding: 10px;
     margin-bottom: 10px;
@@ -115,11 +118,13 @@ nav ul li a:active {
   
   /* Textarea (for message) styling */
   .input-group textarea {
+    font-family: 'Cabin', sans-serif; /* Sets the default font for the page */
     height: 100px; /* Sets a fixed height for the textarea */
   }
   
   /* Button styling */
   button {
+    font-family: 'Cabin', sans-serif; /* Sets the default font for the page */
     border-radius: 5px;
     background-color: #8C6057; /* Dark background color for the button */
     color: white; /* Text color for the button */
