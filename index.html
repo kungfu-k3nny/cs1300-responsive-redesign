@@ -15,15 +15,15 @@
     <nav>
       <ul>
         <!-- Navigation links -->
-        <li><a href="#"><img src="./assets/Home.png" alt="Home Icon">Home</a></li>
-        <li><a href="#"><img src="./assets/Pin_alt.png" alt="Home Icon">Locations</a></li>
-        <li><a href="#"><img src="./assets/Book_open_alt.png" alt="Home Icon">Menu</a></li>
-        <li><a href="#"><img src="./assets/package_car.png" alt="Home Icon">Delivery</a></li>
-        <li><a href="#"><img src="./assets/Message.png" alt="Home Icon">Contact Us</a></li>
+        <li><a href="#" aria-label="Home page button"><img src="./assets/Home.png" alt="Home Icon">Home</a></li>
+        <li><a href="#" aria-label="Locations page button"><img src="./assets/Pin_alt.png" alt="Locations Icon">Locations</a></li>
+        <li><a href="#" aria-label="Menu page button"><img src="./assets/Book_open_alt.png" alt="Menu Icon">Menu</a></li>
+        <li><a href="#" aria-label="Delivery page button"><img src="./assets/package_car.png" alt="Delivery Icon">Delivery</a></li>
+        <li><a href="#" aria-label="Contact Us page button"><img src="./assets/Message.png" alt="Contact Us Icon">Contact Us</a></li>
       </ul>
     </nav>
 
-    <div class="burger">
+    <div class="burger" aria-label="Toggle navigation menu" role="button" tabindex="0">
       <div class="line1"></div>
       <div class="line2"></div>
       <div class="line3"></div>
@@ -43,37 +43,37 @@
       <!-- The form itself -->
       <form>
         <!-- Input group for first name -->
-        <div class="input-group">
+        <div class="input-group" aria-label="First name text field">
           <label for="first-name">First Name</label>
           <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
         </div>
         <!-- Input group for last name -->
-        <div class="input-group">
+        <div class="input-group" aria-label="Last name text field">
           <label for="last-name">Last Name</label>
           <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
         </div>
         <!-- Input group for email -->
-        <div class="input-group">
+        <div class="input-group" aria-label="Email text field">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Enter your email">
         </div>
         <!-- Input group for phone number -->
-        <div class="input-group">
+        <div class="input-group" aria-label="Phone number text field">
           <label for="phone">Phone</label>
           <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
         </div>
         <!-- Input group for subject -->
-        <div class="input-group">
+        <div class="input-group" aria-label="Subject text field">
           <label for="subject">Subject</label>
           <input type="text" id="subject" name="subject" placeholder="Enter the subject">
         </div>
         <!-- Input group for message -->
-        <div class="input-group">
+        <div class="input-group"  aria-label="Message text field">
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Enter the message"></textarea>
         </div>
         <!-- Submit button for the form -->
-        <button type="submit">Send Message</button>
+        <button type="submit" aria-label="Submit button">Send Message</button>
       </form>
     </section>
   </main>
