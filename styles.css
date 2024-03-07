@@ -39,6 +39,7 @@
 /* Navigation buttons surrounded by boxes */
 nav ul li {
   flex: 1;
+  border: 1px solid #333; /* Matching border style */
   background-color: #B7B7A4; /* Fills the button with color */
   border-radius: 5px; /* Optional: Adds rounded corners to the boxes */
   margin: 5px; /* Adds some space between the boxes */
@@ -119,6 +120,7 @@ nav ul li a:active {
   
   /* Button styling */
   button {
+    border-radius: 5px;
     background-color: #8C6057; /* Dark background color for the button */
     color: white; /* Text color for the button */
     padding: 10px 20px;
@@ -135,6 +137,19 @@ nav ul li a:active {
 .burger {
   display: none;
   cursor: pointer;
+  /* Apply button styles */
+  padding: 10px; /* Space around the burger lines */
+  border: 1px solid #333; /* Matching border style */
+  background-color: #B7B7A4; /* Matching background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Drop shadow */
+  border-radius: 5px; /* Rounded corners like the other buttons */
+  width: 60px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.burger:hover {
+  background-color: #a9a9a9; /* Lighter background on hover */
 }
 
 .burger div {
@@ -200,6 +215,10 @@ nav ul li a:active {
 @media screen and (max-width: 480px) { /* You can adjust this breakpoint as needed */
   nav ul li a {
     font-size: 12px; /* Smaller font size for navigation links */
+  }
+
+  .burger {
+    width: 55px; /* Adjust width of burger lines if needed */
   }
 
   /* Adjust the burger lines if necessary */
